@@ -1,0 +1,81 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:jsx-a11y/recommended",
+    "plugin:eslint-comments/recommended",
+    "google",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "prettier",
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "off"
+    ],
+    "@typescript-eslint/no-var-requires": "off",
+    "react/prop-types": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "require-jsdoc": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react-hooks/exhaustive-deps": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "local",
+        "varsIgnorePattern": "[set]",
+        "ignoreRestSiblings": true,
+        "argsIgnorePattern": "^rest"
+      }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ]
+  },
+  "ignorePatterns": [
+    "src/**/*.test.ts",
+    "src/**/*.woff",
+    "src/**/*.ttf",
+    "src/**/*.png",
+    "src/**/*.eot",
+    "src/**/*.css",
+    "src/**/*.scss"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
